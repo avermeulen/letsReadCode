@@ -18,7 +18,7 @@ module.exports = function(salesDataFilePath){
 		var leastPopular = productSales[productSales.length-1]
 		return leastPopular;
 	}
-	
+
 	function productsSalesInfo(filePath){
 		var salesData = readSalesData(filePath);
 		removeHeader(salesData);
@@ -26,7 +26,7 @@ module.exports = function(salesDataFilePath){
 		var productSales = createSalesList(salesPerProduct);
 		return productSales;
 	}
-	
+
 	function readSalesData(filePath){
 		var fileContents = fs.readFileSync(filePath, 'utf8');
 		var lines = fileContents.split('\r');
